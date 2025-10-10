@@ -1,7 +1,7 @@
 def main():
     print("Hello from wiidcos!")
 
-
+print("hello")
 
 
 
