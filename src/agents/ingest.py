@@ -1,4 +1,5 @@
-
+from dotenv import load_dotenv
+load_dotenv()
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, StorageContext, load_index_from_storage
 import os
 
@@ -14,3 +15,5 @@ def build_simple_index(data_dir: str = "./Data", persist_dir: str = "./storage/i
 
 if __name__ == "__main__":
     build_simple_index()
+
+
