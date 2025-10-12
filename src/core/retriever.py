@@ -1,4 +1,3 @@
-# src/core/retriever.py
 import os
 import warnings
 from dotenv import load_dotenv
@@ -11,24 +10,22 @@ from llama_index.core.node_parser import SentenceSplitter
 warnings.filterwarnings("ignore", category=UserWarning)
 load_dotenv()
 
-# ----------------------------------------------------------
-# Load persisted index
-# ----------------------------------------------------------
+
 def load_index(persist_dir: str = None):
-    """Load the vector index from local storage."""
     if persist_dir is None:
         root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
         persist_dir = os.path.join(root_dir, "storage", "index")
 
     if not os.path.exists(persist_dir):
-        raise FileNotFoundError(f"❌ Index not found at {persist_dir}")
+        raise FileNotFoundError(f" Index not found at {persist_dir}")
 
     storage = StorageContext.from_defaults(persist_dir=persist_dir)
-    return load_index_from_storage(storage)
+    index = load_index_from_storage(storage)
+    print(f" Index loaded from {persist_dir}")
+    return index
 
-# ----------------------------------------------------------
-# Advanced Query Function
-# ----------------------------------------------------------
+
+
 def advanced_query(
     query_text: str,
     mode: str = "default",
@@ -36,51 +33,46 @@ def advanced_query(
     stream: bool = False,
     re_rank: bool = True
 ):
-    """
-    Execute an advanced query against the local vector index.
-    Supports summarization, keyword extraction, and re-ranking.
-    """
-    print("🔍 Loading index...")
+
+    print(" Loading index...")
     index = load_index()
 
-    # Optional: fine-tune chunking logic globally
+    # Global settings
     Settings.text_splitter = SentenceSplitter(chunk_size=512, chunk_overlap=50)
 
     retriever = VectorIndexRetriever(index=index, similarity_top_k=top_k)
 
-    # optional LLM-based reranker
+    # Try enabling LLM re-ranking
     if re_rank:
-        print("🔧 Attempting LLM-based reranker...")
+        print(" Attempting LLM-based reranker...")
         try:
-            # Works only if llama_index.postprocessor is available
-            from llama_index.postprocessor.rerank import LLMRerank
+            #  Correct import path for new LlamaIndex versions
+            from llama_index.core.postprocessor import LLMRerank
             reranker = LLMRerank(top_n=top_k)
             Settings.node_postprocessors = [reranker]
-            print("✅ Reranker enabled.")
+            print(" LLM-based reranker enabled.")
         except Exception as e:
-            print(f"⚠️  Reranker unavailable: {e}")
+            print(f" Reranker unavailable: {e}")
             Settings.node_postprocessors = []
 
-    # ✅ define the missing synthesizer
+    # Choose a synthesis style
     synthesizer = get_response_synthesizer(response_mode="tree_summarize")
 
-    # Build query engine
     query_engine = RetrieverQueryEngine(
         retriever=retriever,
-        response_synthesizer=synthesizer,
-        streaming=stream,
+        response_synthesizer=synthesizer
     )
 
-    # Adjust query style based on mode
+    # Adjust mode-based query prompt
     if mode == "summary":
-        query_text = f"Summarize the document with focus on: {query_text}"
+        query_text = f"Summarize the document focusing on: {query_text}"
     elif mode == "keyword":
-        query_text = f"List key terms and entities related to: {query_text}"
+        query_text = f"List key technical concepts or terms related to: {query_text}"
 
-    print(f"🚀 Running query: {query_text}")
+    print(f"\n Running query:\n{query_text}\n")
     response = query_engine.query(query_text)
 
-    # Extract metadata for sources
+    # Collect metadata
     sources = []
     for node in getattr(response, "source_nodes", []):
         meta = node.node.metadata
@@ -90,19 +82,21 @@ def advanced_query(
 
     result = {
         "answer": str(response),
-        "sources": list(set(sources)),
-        "score": getattr(response, "score", None)
+        "sources": sorted(list(set(sources))),
+        "confidence": getattr(response, "score", None)
     }
 
-    print("\n✅ Query completed.")
-    print("🧠 Answer:\n", result["answer"])
-    print("\n📚 Sources:", result["sources"])
+    print(" Query completed.\n")
+    print(" Answer:\n", result["answer"])
+    print("\n Sources:", result["sources"])
+    if result["confidence"]:
+        print(f"\n Confidence: {result['confidence']:.2f}")
+
     return result
 
 
-# ----------------------------------------------------------
-# CLI entry
-# ----------------------------------------------------------
 if __name__ == "__main__":
     q = input("Enter your query: ")
     advanced_query(q, mode="default", top_k=3)
+
+
