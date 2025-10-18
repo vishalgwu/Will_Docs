@@ -87,7 +87,7 @@ def advanced_query(
     }
 
     print(" Query completed.\n")
-    print(" Answer:\n", result["answer"])
+    print(" Answer:\n", result["answer"]) 
     print("\n Sources:", result["sources"])
     if result["confidence"]:
         print(f"\n Confidence: {result['confidence']:.2f}")
