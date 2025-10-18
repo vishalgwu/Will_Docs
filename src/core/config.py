@@ -19,7 +19,7 @@ def configure_llamaindex(temperature: float = 0.1):
     if not OPENAI_API_KEY:
         logger.warning("OPENAI_API_KEY is missing.")
 
-    settings.llm=OpenAI(api_key=OPENAI_API_KEY, temperature=temperature)
+    Settings.llm = OpenAI(api_key=OPENAI_API_KEY, temperature=temperature)
     Settings.num_output = 512  # small, fast
     Settings.chunk_size = 1024
 
