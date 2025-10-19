@@ -11,3 +11,7 @@ pypdf
 tiktoken
 httpx
 loguru
+streamlit
+inngest
+qdrant-client
+llama-index-vector-stores-qdrant
