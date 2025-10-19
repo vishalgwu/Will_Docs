@@ -3,3 +3,157 @@
 2025-10-17 20:16:18.314 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
 2025-10-17 20:19:58.938 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
 2025-10-17 20:21:39.936 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:52:48.975 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:54:29.239 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:54:30.298 | INFO     | src.core.qdrant_store:configure_qdrant:13 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-18 23:54:54.797 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:54:55.593 | INFO     | src.core.qdrant_store:configure_qdrant:13 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-18 23:56:02.003 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:56:02.792 | INFO     | src.core.qdrant_store:configure_qdrant:13 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-18 23:56:25.845 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:56:47.279 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:56:48.078 | INFO     | src.core.qdrant_store:configure_qdrant:13 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-18 23:57:03.372 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:58:04.877 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-18 23:59:12.395 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:00:27.150 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:04:41.103 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:04:42.065 | WARNING  | __main__:<module>:45 - ⚠️ No PDFs found in Data/uploads!
+2025-10-19 00:06:44.179 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:06:45.880 | INFO     | src.core.qdrant_store:configure_qdrant:20 - Qdrant: creating collection 'wiidcos_docs' with dim=1536, distance=Cosine.
+2025-10-19 00:06:46.263 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:06:46.264 | INFO     | __main__:<module>:50 - Processing Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:06:50.131 | SUCCESS  | __main__:<module>:53 - ✅ Completed ingestion for Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:07:18.911 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:07:19.982 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:07:19.993 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:07:22.144 | INFO     | __main__:query_qdrant:25 - 🧠 Query: What is this PDF about?
+2025-10-19 00:07:22.144 | INFO     | __main__:query_qdrant:26 - 💡 Answer: Empty Response
+2025-10-19 00:10:06.343 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:10:09.319 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:10:09.365 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:10:09.366 | INFO     | __main__:<module>:46 - Processing Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:10:13.299 | SUCCESS  | __main__:<module>:49 - ✅ Completed ingestion for Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:14:11.116 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:14:13.153 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:14:13.191 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:14:13.191 | INFO     | __main__:<module>:46 - Processing Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:14:15.215 | SUCCESS  | __main__:<module>:49 - ✅ Completed ingestion for Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:14:55.560 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:14:56.377 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:14:56.395 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:14:57.966 | INFO     | __main__:query_qdrant:25 - 🧠 Query: What is this PDF about?
+2025-10-19 00:14:57.967 | INFO     | __main__:query_qdrant:26 - 💡 Answer: Empty Response
+2025-10-19 00:16:16.994 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:16:18.990 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:16:19.023 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:16:19.025 | INFO     | __main__:<module>:48 - Processing Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:16:23.742 | SUCCESS  | __main__:<module>:55 - ✅ Completed ingestion for Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:19:22.472 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:19:24.940 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:19:25.003 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:19:25.004 | INFO     | __main__:<module>:48 - Processing Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:19:27.647 | SUCCESS  | __main__:<module>:55 - ✅ Completed ingestion for Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:19:50.283 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:19:51.204 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:19:51.245 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:19:52.959 | INFO     | __main__:query_qdrant:25 - 🧠 Query: What is this PDF about?
+2025-10-19 00:19:52.960 | INFO     | __main__:query_qdrant:26 - 💡 Answer: Empty Response
+2025-10-19 00:23:06.132 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:23:08.172 | INFO     | src.core.qdrant_store:configure_qdrant:20 - Qdrant: creating collection 'wiidcos_docs' with dim=1536, distance=Cosine.
+2025-10-19 00:23:08.769 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:23:08.769 | INFO     | __main__:<module>:51 - Processing Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:23:11.530 | SUCCESS  | __main__:<module>:59 - ✅ Completed ingestion for Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:23:39.473 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:23:40.404 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:23:40.467 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:23:44.603 | INFO     | __main__:query_qdrant:25 - 🧠 Query: What is this PDF about?
+2025-10-19 00:23:44.603 | INFO     | __main__:query_qdrant:26 - 💡 Answer: The PDF is about various research papers and studies related to speech separation using neural networks, deep learning, and different models like Transformer, RNN, and LSTM.
+2025-10-19 00:30:15.578 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:39:33.036 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:39:37.441 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:39:37.494 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:39:52.148 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:40:11.915 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is transformers 
+2025-10-19 00:40:15.117 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:40:15.146 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:40:21.984 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is transformers 
+2025-10-19 00:40:21.985 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: Transformers are a type of neural network architecture that has been widely used in natural language processing tasks. They consist of multiple layers of self-attention mechanisms and feed-forward neural networks. Transformers have been shown to be effective in capturing long-range dependencies in sequential data and have achieved state-of-the-art performance in various NLP tasks.
+2025-10-19 00:46:33.024 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-19 00:47:21.984 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\RenderCV_EngineeringResumes_Theme (53).pdf
+2025-10-19 00:47:26.853 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:47:26.916 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:47:39.694 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ RenderCV_EngineeringResumes_Theme (53).pdf ingested successfully.
+2025-10-19 00:47:49.764 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\RenderCV_EngineeringResumes_Theme (53).pdf
+2025-10-19 00:47:55.077 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:47:55.133 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:47:58.242 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ RenderCV_EngineeringResumes_Theme (53).pdf ingested successfully.
+2025-10-19 00:47:58.273 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\RenderCV_EngineeringResumes_Theme (53).pdf
+2025-10-19 00:48:01.012 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:48:01.037 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:48:03.237 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ RenderCV_EngineeringResumes_Theme (53).pdf ingested successfully.
+2025-10-19 00:48:03.318 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is this pdf about
+2025-10-19 00:48:08.952 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:48:08.980 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:48:12.986 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is this pdf about
+2025-10-19 00:48:12.987 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The PDF is a cover letter written by Vishal Fulsundar applying for the Data Analytics Intern position within Goodwill Industries International's Data Center of Excellence. In the letter, Vishal highlights his experience in data science, particularly in processing and visualizing data, as well as his passion for using data to drive mission-driven work. He also emphasizes his skills in data cleaning, organization, and communication, along with his experience in collaborating with partners to improve data accuracy and reliability. Vishal expresses his enthusiasm for the internship's technical challenges and social purpose, aiming to contribute to the development of grant dashboards that align with Goodwill's mission.
+2025-10-19 00:51:31.870 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:51:34.095 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:51:34.144 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:51:40.413 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:51:42.789 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:51:45.512 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:51:45.574 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:51:50.471 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:51:50.503 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is this pdf about
+2025-10-19 00:51:54.478 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:51:54.510 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:51:58.750 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is this pdf about
+2025-10-19 00:51:58.751 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The PDF is a cover letter written by Vishal Fulsundar applying for the Data Analytics Intern position within Goodwill Industries International's Data Center of Excellence. It highlights Vishal's experience in data science, including roles as a Data Scientist Intern and Co-Founder/Product Lead, emphasizing his skills in data processing, visualization, and collaboration. Vishal expresses his enthusiasm for the internship's focus on grant-related dashboards and reporting, aligning with his passion for transforming complex data into meaningful insights for mission-driven work.
+2025-10-19 00:52:20.812 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:52:25.145 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:52:25.182 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:52:28.851 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:52:32.232 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:52:37.145 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:52:37.172 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:52:41.537 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:52:41.565 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is this pdf about
+2025-10-19 00:52:44.256 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:52:44.303 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:52:48.615 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is this pdf about
+2025-10-19 00:52:48.616 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The PDF is a cover letter written by Vishal Fulsundar applying for the Data Analytics Intern position within Goodwill Industries International's Data Center of Excellence. It highlights Vishal's experience in data science, including roles as a Data Scientist Intern and Co-Founder/Product Lead, emphasizing his skills in data processing, visualization, and collaboration to drive meaningful outcomes.
+2025-10-19 00:53:03.474 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:53:05.668 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:53:05.705 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:53:10.122 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:53:22.192 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:53:26.797 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:53:26.845 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:53:30.342 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:53:30.375 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:53:33.228 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:53:33.302 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:53:40.452 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:53:40.537 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is this pdf about?
+2025-10-19 00:53:43.577 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:53:43.602 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:53:47.207 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is this pdf about?
+2025-10-19 00:53:47.219 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The PDF is a cover letter written by Vishal Fulsundar applying for the Data Analytics Intern position within Goodwill Industries International's Data Center of Excellence. It highlights Vishal's experience in data science, including roles as a Data Scientist Intern and Co-Founder/Product Lead, emphasizing his skills in data processing, visualization, and collaboration to drive meaningful outcomes.
+2025-10-19 00:54:41.801 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:54:45.834 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:54:45.922 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:54:50.143 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:55:02.549 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:55:07.096 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:55:07.143 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:55:12.998 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:55:13.030 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 00:55:15.772 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:55:15.817 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:55:22.173 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 00:55:22.260 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is this pdf about?
+2025-10-19 00:55:25.115 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 00:55:25.137 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 00:55:28.466 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is this pdf about?
+2025-10-19 00:55:28.467 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The PDF is a cover letter written by Vishal Fulsundar applying for the Data Analytics Intern position within Goodwill Industries International's Data Center of Excellence. It highlights Vishal's experience in data science, including roles as a Data Scientist Intern and Co-Founder/Product Lead, emphasizing his skills in data processing, visualization, and collaboration to drive meaningful outcomes.
