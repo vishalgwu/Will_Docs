@@ -4,7 +4,7 @@ Hello
 
 Welcome to **WiiDcos**, a full-stack local **RAG (Retrieval-Augmented Generation)** system — built from scratch with **LlamaIndex + Qdrant + FastAPI + Streamlit + Docker**.
 
-This project started life as a "hello-production-RAG" experiment — a way of sewing together the moving parts of how ChatGPT-style apps read documents and answer questions intelligently. Now it's a full-stack system that can take in PDFs, index them in a vector database, and enable you to chat with them directly in your browser. ????
+This project started life as a "hello-production-RAG" experiment — a way of sewing together the moving parts of how ChatGPT-style apps read documents and answer questions intelligently. Now it's a full-stack system that can take in PDFs, index them in a vector database, and enable you to chat with them directly in your browser.
 
 ---
 ##  Tech Stack
@@ -214,21 +214,27 @@ Bump package versions for compatibility with your environment.
 ---
 
 ## Credits
+#### credits ---- 
+- [**LlamaIndex**](https://www.llamaindex.ai/)
+- [**Qdrant**](https://qdrant.tech/)
+- [**FastAPI**](https://fastapi.tiangolo.com/)
+- [**Streamlit**](https://streamlit.io/)
+- [**OpenAI**](https://platform.openai.com/)
 
-- **LlamaIndex**
-- **Qdrant**
-- **FastAPI**
-- **Streamlit**
-- **OpenAI**
+---
 
-## TL;DR
+##  TL;DR
 
-WiiDcos RAG = Upload PDFs → Store in Qdrant → Query via LlamaIndex → Answer with OpenAI → Chat via Streamlit.
+**WiiDcos RAG** = Upload PDFs → Store in Qdrant → Query via LlamaIndex → Answer with OpenAI → Chat via Streamlit.
 
 A small but end-to-end production-ready RAG stack, built with logs, tests, and plenty of debugging.
 
-**Author:** Vishal Fulsundar
-M.S. Data Science — The George Washington University
+---
+
+**Author:** Vishal Fulsundar  
+ M.S. Data Science — The George Washington University  
+ [LinkedIn](https://www.linkedin.com/in/vishalfulsundar/)
+
 
 
 ---
