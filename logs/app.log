@@ -157,3 +157,20 @@
 2025-10-19 00:55:25.137 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
 2025-10-19 00:55:28.466 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is this pdf about?
 2025-10-19 00:55:28.467 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The PDF is a cover letter written by Vishal Fulsundar applying for the Data Analytics Intern position within Goodwill Industries International's Data Center of Excellence. It highlights Vishal's experience in data science, including roles as a Data Scientist Intern and Co-Founder/Product Lead, emphasizing his skills in data processing, visualization, and collaboration to drive meaningful outcomes.
+2025-10-19 01:04:30.812 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 01:04:33.253 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 01:04:33.328 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 01:04:37.056 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 01:04:57.758 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 01:05:01.307 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 01:05:01.401 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 01:05:06.173 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 01:05:21.247 | INFO     | src.api.routes.upload:upload_file:19 - 📄 Received file: Data\uploads\Attention_Is_All_You_Need_In_Speech_Separation.pdf
+2025-10-19 01:05:24.463 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 01:05:24.493 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 01:05:28.116 | SUCCESS  | src.api.routes.upload:upload_file:30 - ✅ Attention_Is_All_You_Need_In_Speech_Separation.pdf ingested successfully.
+2025-10-19 01:05:28.143 | INFO     | src.api.routes.query:query_docs:11 - 🔍 Query received: what is main part in this pdf
+2025-10-19 01:05:34.249 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-19 01:05:34.334 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-19 01:05:38.542 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is main part in this pdf
+2025-10-19 01:05:38.544 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The main part in this PDF is the proposed model for speech separation, which consists of an encoder, a decoder, and a masking network. The model is based on the learned-domain masking approach and utilizes Transformers to learn short and long-term dependencies for separating audio signals from multiple speakers in a mixture.
