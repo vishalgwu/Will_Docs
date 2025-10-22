@@ -174,3 +174,194 @@
 2025-10-19 01:05:34.334 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
 2025-10-19 01:05:38.542 | INFO     | src.core.retriever:query_qdrant:25 - 🧠 Query: what is main part in this pdf
 2025-10-19 01:05:38.544 | INFO     | src.core.retriever:query_qdrant:26 - 💡 Answer: The main part in this PDF is the proposed model for speech separation, which consists of an encoder, a decoder, and a masking network. The model is based on the learned-domain masking approach and utilizes Transformers to learn short and long-term dependencies for separating audio signals from multiple speakers in a mixture.
+2025-10-22 16:05:20.015 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-22 16:22:05.227 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 16:22:10.275 | INFO     | src.core.qdrant_store:configure_qdrant:20 - Qdrant: creating collection 'wiidcos_docs' with dim=1536, distance=Cosine.
+2025-10-22 16:22:11.766 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:22:51.753 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=c447ae58-e9b2-4173-9d92-ab7a8e2b1f5b).
+2025-10-22 16:23:21.875 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: What is this PDF about?" | doc_id=None | source=None
+2025-10-22 16:23:23.395 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:23:23.433 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:23:28.325 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: What is this PDF about?"  | doc_id=None source=None
+2025-10-22 16:23:28.326 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF is about a system prototype designed to handle natural language queries, generate SQL queries, provide insightful answers, handle temporal data, and create visualizations for trend analysis in enterprise scenarios. It emphasizes accessibility, usability, flexibility in generating visual analytics, and the importance of data security and transparent data handling practices in AI project implementations.
+2025-10-22 16:24:52.167 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:24:55.764 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:24:55.823 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:25:12.385 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=35cbce9b-8d3d-42a1-9fbe-e6e642753c8e).
+2025-10-22 16:25:35.831 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: What is this PDF about? | doc_id=None | source=None
+2025-10-22 16:25:39.814 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:25:39.980 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:25:47.878 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: What is this PDF about?  | doc_id=None source=None
+2025-10-22 16:25:47.883 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF is about the development and evaluation of language models and agents in various scenarios, including software engineering, interactive learning, and enterprise applications. It discusses the proficiency of systems in handling natural language queries, generating SQL queries, creating visualizations, and providing insightful answers. The document also touches on the importance of data security, user privacy, and transparent data handling practices in AI projects. Additionally, it mentions the release of code for reproducing experimental results and the potential integration of open-source large language models for cost-saving and transparency reasons.
+2025-10-22 16:26:07.063 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 16:26:14.654 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:26:14.694 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:26:38.902 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=44cfe5ed-33ec-4bb6-9867-4549264df980).
+2025-10-22 16:26:51.740 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: What is this PDF about? | doc_id=None | source=None
+2025-10-22 16:26:58.848 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:26:59.056 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:27:04.451 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: What is this PDF about?  | doc_id=None source=None
+2025-10-22 16:27:04.512 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF is about language agents, automated software engineering, and the interaction between agents and users in real-world domains. It also covers the use of language models in programming tasks and the alignment of text with embodied environments for interactive learning.
+2025-10-22 16:27:10.555 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: What is this PDF about? | doc_id=None | source=None
+2025-10-22 16:27:14.843 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:27:14.873 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:27:22.527 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: What is this PDF about?  | doc_id=None source=None
+2025-10-22 16:27:22.548 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF is about language models, agent-computer interfaces, automated software engineering, and the use of language agents in various scenarios such as web interaction, tool-agent-user interaction, and enterprise applications.
+2025-10-22 16:27:54.595 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 16:28:00.264 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:28:00.312 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:28:12.016 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=ffd6dd13-d0bb-45b0-a3c6-025ccf4cff27).
+2025-10-22 16:28:12.020 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: What is this PDF about? | doc_id=None | source=None
+2025-10-22 16:28:12.627 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:28:12.656 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:28:15.120 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: What is this PDF about?  | doc_id=None source=None
+2025-10-22 16:28:15.121 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF is about the development and evaluation of a system prototype that utilizes natural language queries to interact with a database, generating SQL queries and providing insightful answers for business stakeholders. The system demonstrates proficiency in handling temporal data, creating visualizations, and aiding in trend analysis.
+2025-10-22 16:29:28.860 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:29:31.095 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:29:31.138 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:29:44.354 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=c918dc11-725a-484e-adab-8b4ddec66142).
+2025-10-22 16:30:14.747 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:30:18.703 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:30:18.729 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:30:32.096 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=31665d55-8c4f-4771-adb4-adc48a2cdb62).
+2025-10-22 16:30:32.155 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:30:34.959 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:30:34.993 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:30:47.481 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=a013df05-665e-45fe-824f-a54db119978b).
+2025-10-22 16:30:47.516 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about?  | doc_id=a013df05-665e-45fe-824f-a54db119978b | source=None
+2025-10-22 16:30:51.978 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:30:52.055 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:30:53.873 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about?   | doc_id=a013df05-665e-45fe-824f-a54db119978b source=None
+2025-10-22 16:30:53.944 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: Empty Response
+2025-10-22 16:31:45.469 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:31:49.243 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:31:49.311 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:32:01.484 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=58df1c22-6372-4f22-8487-9e85400d2046).
+2025-10-22 16:32:01.518 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about?  | doc_id=58df1c22-6372-4f22-8487-9e85400d2046 | source=None
+2025-10-22 16:32:04.159 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:32:04.203 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:32:05.452 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about?   | doc_id=58df1c22-6372-4f22-8487-9e85400d2046 source=None
+2025-10-22 16:32:05.454 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: Empty Response
+2025-10-22 16:36:07.688 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:36:12.111 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:36:12.141 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:36:19.622 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=68872888-1823-4a85-a11c-601c250d2f2a).
+2025-10-22 16:36:25.954 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:36:29.786 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:36:29.851 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:36:41.259 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=e7089aa8-d699-4ae7-80f4-e0ee1e07db1c).
+2025-10-22 16:36:41.289 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about?  | doc_id=e7089aa8-d699-4ae7-80f4-e0ee1e07db1c | source=None
+2025-10-22 16:36:43.944 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:36:43.970 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:36:44.325 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about?   | doc_id=e7089aa8-d699-4ae7-80f4-e0ee1e07db1c source=None
+2025-10-22 16:36:44.328 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: Empty Response
+2025-10-22 16:42:50.520 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:42:54.675 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:42:54.715 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:43:08.304 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=e098ef45-3b45-4bc3-9e5b-af58e6a01367).
+2025-10-22 16:43:31.917 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:43:37.678 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:43:37.743 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:43:51.333 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=88f33ce7-45f5-4ffd-936f-769517fbb7d5).
+2025-10-22 16:43:51.391 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 16:43:54.892 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:43:54.948 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:44:10.697 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=018a65e9-77e0-4d0b-bba7-38a9fa646fad).
+2025-10-22 16:44:10.737 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: explain the main concept from this pdf? | doc_id=018a65e9-77e0-4d0b-bba7-38a9fa646fad | source=None
+2025-10-22 16:44:14.765 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:44:14.802 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:44:15.345 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: explain the main concept from this pdf?  | doc_id=018a65e9-77e0-4d0b-bba7-38a9fa646fad source=None
+2025-10-22 16:44:15.346 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: Empty Response
+2025-10-22 16:50:47.625 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-22 16:52:05.882 | INFO     | src.core.config:<module>:14 - Config loaded. OPENAI key present? True
+2025-10-22 16:52:59.852 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 16:53:08.500 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:53:08.558 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:53:30.833 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=22c5d9b7-a3e6-46cc-be46-ff6f75165144).
+2025-10-22 16:53:45.579 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 16:53:51.272 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:53:51.314 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:54:07.263 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=631dee7a-647f-4b1b-b5e4-c79a03da27b2).
+2025-10-22 16:54:07.383 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 16:54:11.546 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:54:11.581 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:54:27.081 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=347ce149-951f-49d7-9003-ecf33621c26a).
+2025-10-22 16:54:27.113 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about? | doc_id=347ce149-951f-49d7-9003-ecf33621c26a | source=None
+2025-10-22 16:54:30.157 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 16:54:30.202 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 16:54:30.531 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about?  | doc_id=347ce149-951f-49d7-9003-ecf33621c26a source=None
+2025-10-22 16:54:30.541 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: Empty Response
+2025-10-22 17:49:44.750 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 17:51:24.895 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 17:52:22.094 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 17:52:27.493 | INFO     | src.core.qdrant_store:configure_qdrant:20 - Qdrant: creating collection 'wiidcos_docs' with dim=1536, distance=Cosine.
+2025-10-22 17:52:28.436 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 17:52:40.789 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=36b411a0-2558-4355-91dc-57b1855d0db9).
+2025-10-22 17:53:00.233 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 17:53:01.668 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 17:53:01.732 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 17:53:07.344 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=c2114411-3bbf-4604-8ba5-078d517bad13).
+2025-10-22 17:53:07.372 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 17:53:08.922 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 17:53:08.956 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 17:53:17.571 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=3e529322-1335-4efc-a470-aff848f399a3).
+2025-10-22 17:53:17.589 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about ?  | doc_id=3e529322-1335-4efc-a470-aff848f399a3 | source=None
+2025-10-22 17:53:19.184 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 17:53:19.237 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 17:53:20.562 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about ?   | doc_id=3e529322-1335-4efc-a470-aff848f399a3 source=None
+2025-10-22 17:53:20.563 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: Empty Response
+2025-10-22 18:26:17.196 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 18:26:29.455 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about? | doc_id=None | source=agent_that_matters.pdf
+2025-10-22 18:26:30.737 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:26:30.748 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:26:34.387 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about?  | doc_id=None source=agent_that_matters.pdf
+2025-10-22 18:26:34.389 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF seems to be related to automated software engineering, agent-computer interfaces, and datasets for question answering. It includes references to papers and URLs discussing these topics.
+2025-10-22 18:26:55.875 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is this pdf about? | doc_id=None | source=agent_that_matters.pdf
+2025-10-22 18:26:56.479 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:26:56.535 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:26:59.227 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is this pdf about?  | doc_id=None source=agent_that_matters.pdf
+2025-10-22 18:26:59.227 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The PDF seems to be related to automated software engineering, agent-computer interfaces, and datasets for question answering. It includes references to various papers and URLs discussing these topics.
+2025-10-22 18:27:54.532 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 18:28:33.064 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 18:28:58.482 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:28:58.555 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:29:44.066 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=1fae0db4-9df3-4461-8943-4cef77035395).
+2025-10-22 18:30:07.114 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 18:30:18.383 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:30:18.427 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:30:42.824 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=4aea3654-3c46-451e-8eb6-06b5997cd508).
+2025-10-22 18:30:48.251 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\text-sql.pdf
+2025-10-22 18:30:51.348 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:30:51.415 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:31:12.938 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ text-sql.pdf ingested successfully (doc_id=c52fdeab-8107-4c0c-9db3-4255d4a6a106).
+2025-10-22 18:31:12.989 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is main concept in the text-sql pdf? what is this pdf talk about? | doc_id=None | source=text-sql.pdf
+2025-10-22 18:31:16.211 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:31:16.240 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:31:24.390 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is main concept in the text-sql pdf? what is this pdf talk about?  | doc_id=None source=text-sql.pdf
+2025-10-22 18:31:24.437 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The main concept in the text-sql PDF is the development of a prototype system that features a frontend interface allowing non-technical users to input natural language queries. The PDF discusses the system's ability to generate accurate SQL queries and provide insightful answers, emphasizing its practical application in enterprise scenarios.
+2025-10-22 18:31:48.088 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 18:31:51.201 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:31:51.264 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:32:10.171 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=63d63c4f-64c5-4294-9380-e5766db16e71).
+2025-10-22 18:32:46.817 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 18:32:50.577 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:32:50.609 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:33:10.818 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=d0b17f91-72bb-47a9-a209-e29638089cc7).
+2025-10-22 18:33:10.882 | INFO     | src.api.routes.upload:upload_file:21 - 📄 Received file: Data\uploads\agent_that_matters.pdf
+2025-10-22 18:33:14.121 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:33:14.171 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:33:35.026 | SUCCESS  | src.api.routes.upload:upload_file:41 - ✅ agent_that_matters.pdf ingested successfully (doc_id=d0683824-40cc-4215-b89a-590bf3754208).
+2025-10-22 18:33:35.071 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what is main concept in the pdf? what is agent? | doc_id=None | source=agent_that_matters.pdf
+2025-10-22 18:33:38.130 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:33:38.166 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:33:47.724 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what is main concept in the pdf? what is agent?  | doc_id=None source=agent_that_matters.pdf
+2025-10-22 18:33:47.728 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The main concept in the PDF is the discussion on agents. An agent can be understood as an entity that acts autonomously to achieve specific goals or tasks.
+2025-10-22 18:39:54.107 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 18:39:59.653 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 18:40:15.378 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True
+2025-10-22 18:43:14.018 | INFO     | src.api.routes.query:query_docs:16 - 🔍 Query received: what | doc_id=None | source=None
+2025-10-22 18:43:15.427 | INFO     | src.core.qdrant_store:configure_qdrant:18 - Qdrant: collection 'wiidcos_docs' already exists.
+2025-10-22 18:43:15.472 | INFO     | src.core.qdrant_store:configure_qdrant:28 -  Qdrant connected: localhost:6333, collection=wiidcos_docs
+2025-10-22 18:43:17.631 | INFO     | src.core.retriever:query_qdrant:36 - 🧠 Query: what  | doc_id=None source=None
+2025-10-22 18:43:17.632 | INFO     | src.core.retriever:query_qdrant:37 - 💡 Answer: The provided context information does not contain a specific question or topic to provide an answer.
+2025-10-22 18:43:30.814 | INFO     | src.core.config:<module>:17 - Config loaded. OPENAI key present? True

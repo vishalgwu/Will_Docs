@@ -11,11 +11,11 @@ from src.core.config import configure_llamaindex
 from src.core.qdrant_store import configure_qdrant
 
 inngest = Inngest(app_id="wiidcos")
+import uuid
+from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, StorageContext
+from llama_index.core.node_parser import SentenceSplitter
 
-@inngest.create_function(
-    fn_id="ingest_document",
-    trigger=Event(name="doc/ingest.requested")
-)
+# inside ingest_document(event): (decorator version)
 def ingest_document(event):
     data = event.data
     file_path = data["path"]
@@ -24,36 +24,51 @@ def ingest_document(event):
     configure_llamaindex(temperature=0.1)
     _, store = configure_qdrant()
 
-    logger.info(f"📥 Starting ingestion for {file_name}")
+    # ✅ create a unique doc_id for this file
+    doc_id = str(uuid.uuid4())
+
+    logger.info(f"📥 Starting ingestion for {file_name} (doc_id={doc_id})")
+
+    # Load raw docs
     docs = SimpleDirectoryReader(input_files=[file_path]).load_data()
 
-    # ✅ Explicitly attach Qdrant via StorageContext
-    storage_context = StorageContext.from_defaults(vector_store=store)
-    index = VectorStoreIndex.from_documents(docs, storage_context=storage_context)
+    # ✅ Attach metadata on each Document
+    for d in docs:
+        d.metadata = d.metadata or {}
+        d.metadata.update({"doc_id": doc_id, "source": file_name})
 
-    # ✅ Persist index structure (optional)
+    # (optional) custom chunking, keeps metadata
+    splitter = SentenceSplitter(chunk_size=1024, chunk_overlap=100)
+    nodes = splitter.get_nodes_from_documents(docs)
+
+    storage_context = StorageContext.from_defaults(vector_store=store)
+    index = VectorStoreIndex(nodes, storage_context=storage_context)
+
+    # Persist index structure (optional local)
     index.storage_context.persist(persist_dir="./storage/qdrant")
 
-    logger.success(f"✅ Completed ingestion for {file_name}")
-    return {"status": "completed", "filename": file_name}
+    logger.success(f"✅ Completed ingestion for {file_name} (doc_id={doc_id})")
+    return {"status": "completed", "filename": file_name, "doc_id": doc_id}
 
 
 if __name__ == "__main__":
-    uploads_dir = Path("./Data/uploads")
-    pdf_files = list(uploads_dir.glob("*.pdf"))
+    # ...existing code...
+    configure_llamaindex(temperature=0.1)
+    _, store = configure_qdrant()
+    for file in pdf_files:
+        doc_id = str(uuid.uuid4())
+        logger.info(f"Processing {file.name} (doc_id={doc_id})")
 
-    if not pdf_files:
-        logger.warning("⚠️ No PDFs found in Data/uploads!")
-    else:
-        configure_llamaindex(temperature=0.1)
-        _, store = configure_qdrant()
-        for file in pdf_files:
-            logger.info(f"Processing {file.name}")
-            docs = SimpleDirectoryReader(input_files=[str(file)]).load_data()
+        docs = SimpleDirectoryReader(input_files=[str(file)]).load_data()
+        for d in docs:
+            d.metadata = d.metadata or {}
+            d.metadata.update({"doc_id": doc_id, "source": file.name})
 
-            # ✅ Explicit StorageContext ensures embeddings are pushed to Qdrant
-            storage_context = StorageContext.from_defaults(vector_store=store)
-            index = VectorStoreIndex.from_documents(docs, storage_context=storage_context)
-            index.storage_context.persist(persist_dir="./storage/qdrant")
+        splitter = SentenceSplitter(chunk_size=1024, chunk_overlap=100)
+        nodes = splitter.get_nodes_from_documents(docs)
 
-            logger.success(f"✅ Completed ingestion for {file.name}")
+        storage_context = StorageContext.from_defaults(vector_store=store)
+        index = VectorStoreIndex(nodes, storage_context=storage_context)
+        index.storage_context.persist(persist_dir="./storage/qdrant")
+
+        logger.success(f"✅ Completed ingestion for {file.name} (doc_id={doc_id})")

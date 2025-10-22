@@ -1,35 +1,44 @@
-# src/core/retriever.py
-from llama_index.core import VectorStoreIndex
-from src.core.qdrant_store import configure_qdrant
-from src.core.config import configure_llamaindex
-from loguru import logger
 import warnings
-
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
+from loguru import logger
+from typing import Optional
 
-def query_qdrant(query: str, top_k: int = 3):
-    """Query vectors stored in Qdrant via LlamaIndex."""
+from llama_index.core import VectorStoreIndex, get_response_synthesizer
+from llama_index.core.vector_stores.types import MetadataFilters, ExactMatchFilter
+
+from src.core.qdrant_store import configure_qdrant
+from src.core.config import configure_llamaindex
+
+def query_qdrant(query: str, top_k: int = 3, doc_id: Optional[str] = None, source: Optional[str] = None):
+    """Query vectors stored in Qdrant via LlamaIndex, optionally scoped to a doc_id or source (filename)."""
     configure_llamaindex(temperature=0.1)
     _, store = configure_qdrant()
 
-    # ✅ Create index from Qdrant vector store
     index = VectorStoreIndex.from_vector_store(store)
 
-    # ✅ Create query engine (retriever + response synthesizer)
-    query_engine = index.as_query_engine(similarity_top_k=top_k, response_mode="compact")
+    filters = None
+    if doc_id:
+        filters = MetadataFilters(filters=[ExactMatchFilter(key="doc_id", value=doc_id)])
+    elif source:
+        filters = MetadataFilters(filters=[ExactMatchFilter(key="source", value=source)])
 
-    # ✅ Run the query
+    synth = get_response_synthesizer(response_mode="compact")
+    # ✅ pass filters so retriever only looks at that document's chunks
+    query_engine = index.as_query_engine(
+        similarity_top_k=top_k,
+        response_synthesizer=synth,
+        filters=filters
+    )
     response = query_engine.query(query)
-    logger.info(f"🧠 Query: {query}")
-    logger.info(f"💡 Answer: {response}")
 
+    logger.info(f"🧠 Query: {query}  | doc_id={doc_id} source={source}")
+    logger.info(f"💡 Answer: {response}")
     print(f"\nAnswer:\n{response}\n")
     return str(response)
 
-
 if __name__ == "__main__":
     import sys
-    query = sys.argv[1] if len(sys.argv) > 1 else "What is this PDF about?"
-    query_qdrant(query)
+    q = sys.argv[1] if len(sys.argv) > 1 else "What is this PDF about?"
+    query_qdrant(q)
