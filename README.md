@@ -1,4 +1,4 @@
-#  WiiDcos RAG — Chat with Your PDFs
+#  WillDocs RAG — Chat with Your PDFs
 
 Hello 
 
